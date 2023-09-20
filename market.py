@@ -39,3 +39,7 @@ def market_page():
 ]
     return render_template('market.html', item=items) 
 # In order for our html file to access this data we are accessing, we have to use something called a templating engine called jinja Template, this basically just involves adding double curly bracees and the name of the variable you want to access
+
+if __name__ == '__main__':
+    db.create_all()
+    app.run(debug=True)
